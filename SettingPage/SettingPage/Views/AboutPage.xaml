@@ -20,7 +20,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -76,6 +76,90 @@
                         TextColor="White" />
             </StackLayout>
         </ScrollView>
+    </Grid>-->
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <StackLayout Orientation="Horizontal"  IsVisible="true">
+                <Label  Text="COMPANY"  HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                <Label  Text="ValueCompany"  FontSize="18" TextColor="Black" 
+                                    HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                                    LineBreakMode="TailTruncation" />
+                <Button        WidthRequest="40"  HeightRequest="40" HorizontalOptions="End" VerticalOptions="Center"
+                                    />
+            </StackLayout >
+            <BoxView   IsVisible="true" />
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <StackLayout Orientation="Horizontal" IsVisible="true">
+                <Label Text="PERSON" 
+                                   HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                <Label  Text="ValuePerson"  FontSize="18" TextColor="Black" 
+                                    HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                <Button   
+                                    WidthRequest="40"  HeightRequest="40" 
+                                   />
+            </StackLayout>
+            <BoxView   IsVisible="true" />
+        </StackLayout> 
+        <StackLayout Grid.Row="2">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="ACTIVITYTYPE" />
+                <Picker ItemsSource="{Binding ActivityTypes}" SelectedItem="{Binding SelectedActivityType}" 
+                                         />
+            </StackLayout>
+            <BoxView   IsVisible="true" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3">
+            <Label Text="DATE" />
+            <BoxView     IsVisible="true" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="FROM" 
+                                    VerticalOptions="Center" 
+                                   HorizontalOptions="FillAndExpand"
+                                   FontAttributes="None" FontSize="14" />
+                <DatePicker Date="{Binding ActivityFromDateTime.Date}" 
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                <TimePicker Time="{Binding ActivityFromDateTime.Time}"
+                                    HorizontalOptions="End" VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView   IsVisible="true" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="TO" 
+                               VerticalTextAlignment="Center" 
+                               HorizontalOptions="FillAndExpand"
+                               FontAttributes="None" FontSize="14" />
+                <DatePicker Date="{Binding ActivityToDateTime.Date}" 
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                <TimePicker  Time="{Binding ActivityToDateTime.Time}"
+                                     HorizontalOptions="End" VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView IsVisible="true" />
+            <StackLayout Margin="0,7,0,0" Orientation="Horizontal" Spacing="0">
+                <Label Margin="3,3,0,0" Text="SHOWINCALENDAR" 
+                               HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                <Switch IsToggled="{Binding IsAgendaType}" OnColor="{DynamicResource ColorPrimary}"
+                                HorizontalOptions="End" VerticalOptions="Center"/>
+
+
+            </StackLayout>
+            <BoxView IsVisible="true" />
+        </StackLayout>
+        <StackLayout Grid.Row="4">
+            <Label Text="NOTES" Margin="0,7,0,0" />
+            <Frame BorderColor="Gray" HasShadow="False" Margin="10">
+                <Editor HorizontalOptions="FillAndExpand" Text="Note">
+               
+                </Editor>
+            </Frame>
+        </StackLayout>
     </Grid>
-    
+
 </ContentPage>
