@@ -94,7 +94,7 @@
                 <Button        WidthRequest="40"  HeightRequest="40" HorizontalOptions="End" VerticalOptions="Center"
                                     />
             </StackLayout >
-            <BoxView   IsVisible="true" />
+            <BoxView   IsVisible="true" HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
         <StackLayout Grid.Row="1">
             <StackLayout Orientation="Horizontal" IsVisible="true">
@@ -102,11 +102,9 @@
                                    HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
                 <Label  Text="ValuePerson"  FontSize="18" TextColor="Black" 
                                     HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
-                <Button   
-                                    WidthRequest="40"  HeightRequest="40" 
-                                   />
+                <Button WidthRequest="40"  HeightRequest="40"/>
             </StackLayout>
-            <BoxView   IsVisible="true" />
+            <BoxView   IsVisible="true" HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand"  />
         </StackLayout> 
         <StackLayout Grid.Row="2">
             <StackLayout Orientation="Horizontal">
@@ -114,12 +112,12 @@
                 <Picker ItemsSource="{Binding ActivityTypes}" SelectedItem="{Binding SelectedActivityType}" 
                                          />
             </StackLayout>
-            <BoxView   IsVisible="true" />
+            <BoxView   IsVisible="true" HeightRequest="1" BackgroundColor="Black"  HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
         <StackLayout Grid.Row="3">
             <Label Text="DATE" />
-            <BoxView     IsVisible="true" />
+            <BoxView     IsVisible="true" WidthRequest="1" />
             <StackLayout Orientation="Horizontal">
                 <Label Text="FROM" 
                                     VerticalOptions="Center" 
@@ -130,7 +128,7 @@
                 <TimePicker Time="{Binding ActivityFromDateTime.Time}"
                                     HorizontalOptions="End" VerticalOptions="Center"/>
             </StackLayout>
-            <BoxView   IsVisible="true" />
+            <BoxView   IsVisible="true" HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" />
             <StackLayout Orientation="Horizontal">
                 <Label Text="TO" 
                                VerticalTextAlignment="Center" 
@@ -141,16 +139,14 @@
                 <TimePicker  Time="{Binding ActivityToDateTime.Time}"
                                      HorizontalOptions="End" VerticalOptions="Center"/>
             </StackLayout>
-            <BoxView IsVisible="true" />
+            <BoxView IsVisible="true" WidthRequest="1" />
             <StackLayout Margin="0,7,0,0" Orientation="Horizontal" Spacing="0">
                 <Label Margin="3,3,0,0" Text="SHOWINCALENDAR" 
                                HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
                 <Switch IsToggled="{Binding IsAgendaType}" OnColor="{DynamicResource ColorPrimary}"
                                 HorizontalOptions="End" VerticalOptions="Center"/>
-
-
             </StackLayout>
-            <BoxView IsVisible="true" />
+            <BoxView IsVisible="true" HeightRequest="1" BackgroundColor="Black"  HorizontalOptions="FillAndExpand"/>
         </StackLayout>
         <StackLayout Grid.Row="4">
             <Label Text="NOTES" Margin="0,7,0,0" />
