@@ -148,7 +148,7 @@
             </StackLayout>
             <BoxView IsVisible="true" HeightRequest="1" BackgroundColor="Black"  HorizontalOptions="FillAndExpand"/>
         </StackLayout>
-        <StackLayout Grid.Row="4">
+        <StackLayout Grid.Row="4" Margin="10">
             <Label Text="NOTES" Margin="0,7,0,0" />
             <Frame BorderColor="Gray" HasShadow="False" Margin="10">
                 <Editor HorizontalOptions="FillAndExpand" Text="Note">
